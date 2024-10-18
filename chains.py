@@ -2,7 +2,6 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_mistralai import ChatMistralAI
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
-from openai import project
 
 load_dotenv()
 
@@ -10,7 +9,7 @@ reflection_prompt = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            "You are viral twitter influencer grading a tweet. Generate citique and recommendations for the user's tweet"
+            "You are viral twitter influencer grading a tweet. Generate critique and recommendations for the user's tweet"
             "Always provide detailed recommendations, including requests for length, virality, style etc.",
         ),
         MessagesPlaceholder(variable_name="messages"),
